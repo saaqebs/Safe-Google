@@ -44,21 +44,12 @@
   cursor: pointer;
 }
 
-.horizontal-center {
+.horizontal {
   text-align: center;
+  padding-top: 30px;
 }
 
-.verticle-center {
-  -ms-transform: translateY(550%);
-  transform: translateY(550%);
-}
-
-.verticle-button {
-  -ms-transform: translateY(850%);
-  transform: translateY(850%);
-}
-
-.verticle-google {
-  -ms-transform: translateY(130%);
-  transform: translateY(130%);
+.horizontal img {
+  padding-top: 170px;
+  width: 500px;
 }
