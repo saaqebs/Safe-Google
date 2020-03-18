@@ -53,3 +53,22 @@
   padding-top: 170px;
   width: 500px;
 }
+
+@media only screen and (max-width: 767px){
+  #searchbar {
+    width: 85%;
+    height: 600%;
+    font-size: 600%;
+    margin-top: 5%;
+  }
+
+  .searchbutton {
+    font-size: 400%;
+    margin-top: 5%;
+  }
+
+  .horizontal img {
+    padding-top: 50%;
+    width: 95%;
+  }
+}
