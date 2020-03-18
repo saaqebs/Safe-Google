@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/google.jng" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Saaqeb Siddiqi">
+
+    <title> Safe Google </title>
+    <script src="./js/script.js"> </script>
+  </head>
+  <body>
+    <div class="horizontal-center">
+      <div class="verticle-google">
+        <img src="./img/google.png" height="155" width="500"/>
+      </div>
+    </div>
+    <form action="https://www.google.com/search?">
+      <input name="hl" type="hidden" value="en">
+      <div class="verticle-center">
+        <div class="horizontal-center">
+          <input name="q" type="text" autocomplete="off" maxlength="2048"
+              autofocus id="searchbar" required minlength="2" />
+        </div>
+      </div>
+      <div class="horizontal-center">
+        <div class="verticle-button">
+          <button type="submit" class="searchbutton"> Safe Search </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
