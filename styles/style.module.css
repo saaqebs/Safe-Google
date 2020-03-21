@@ -49,9 +49,24 @@
   padding-top: 30px;
 }
 
-.horizontal img {
+.container {
+  position: relative;
+  left: 0;
+}
+
+.container img {
   padding-top: 170px;
   width: 500px;
+}
+
+.container p {
+  left: 45%;
+  position: absolute;
+  color: rgb(24,26,39);
+  font-size: 50px;
+  padding-top: 140px;
+  font-family: 'Montserrat';
+  font-style: italic;
 }
 
 @media only screen and (max-width: 767px){

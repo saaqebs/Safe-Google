@@ -41,7 +41,10 @@ function Body(props) {
   return (
     <body>
       <div className={style.horizontal}>
-        <img src={google} alt="Google" />
+        <div className={style.container}>
+          <p> Safer </p>
+          <img src={google} alt="Google" />
+        </div>
       </div>
       <SearchForm />
     </body>
