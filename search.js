@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // import styles from './styles/styles.module.css';
-import './styles/style.css';
+import style from './styles/style.module.css';
 import google from './images/google.png';
 
 class Search extends Component {
@@ -18,19 +18,21 @@ class Search extends Component {
           <script src="./script/script.js"> </script>
         </head>
         <body>
-          <div class="horizontal">
+          <div className={style.horizontal}>
             <img src={google} alt="Google" />
           </div>
 
           <form action="https://www.google.com/search?">
             <input name="hl" type="hidden" value="en" />
-            <div class="horizontal">
+            <div className={style.horizontal}>
               <input name="q" type="text" autocomplete="off" maxlength="2048"
-                  autofocus id="searchbar" required minlength="2" />
+                  autofocus id={style.searchbar} required minlength="2" />
             </div>
 
-            <div class="horizontal">
-              <button type="submit" class="searchbutton"> Safe Search </button>
+            <div className={style.horizontal}>
+              <button type="submit" className={style.searchbutton}>
+                Safe Search
+              </button>
             </div>
           </form>
 
