@@ -27,7 +27,7 @@ function SearchForm(props) {
       <input name="hl" type="hidden" value="en" />
       <div className={style.padding_top}>
         <input name="q" type="text" autocomplete="off" id={style.searchbar}
-          autofocus required onfocus="this.select()" maxlength="2048" minlength="1" />
+          autofocus="autofocus" required onFocus="this.select()" maxlength="2048" minlength="1" />
       </div>
 
       <div className={style.padding_top}>
