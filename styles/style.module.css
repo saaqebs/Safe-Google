@@ -1,28 +1,11 @@
 
-#searchbar {
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    padding: 10px;
-    width: 500px;
-    height: 43px;
-    font: Arial;
-    font-size: 18px;
-    background-color:transparent;
-    color:rgba(0,0,0,.87);
-    word-wrap:break-word;
-}
-
-#searchbar:focus {
-  outline: none;
-  -moz-box-shadow: 1px 1px 1px 1px #ccc;
-  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
-  box-shadow: 1px 1px 1px 1px #ccc;
-}
-
-#searchbar:hover {
-  -moz-box-shadow: 1px 1px 1px 1px #ccc;
-  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
-  box-shadow: 1px 1px 1px 1px #ccc;
+.visit_link {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  /* margin: 20px 0px 0px 20px; */
+  font-size: 20px;
+  font-family: "Arial";
 }
 
 .searchbutton {
@@ -46,12 +29,14 @@
 
 .horizontal {
   text-align: center;
-  padding-top: 30px;
+}
+
+.padding_top {
+  padding-top: 20px;
 }
 
 .container {
   position: relative;
-  left: 0;
 }
 
 .container img {
@@ -60,7 +45,8 @@
 }
 
 .container p {
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   color: rgb(24,26,39);
   font-size: 50px;
@@ -69,21 +55,74 @@
   font-style: italic;
 }
 
+.explanation {
+  padding-top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+}
+
+.explanation h1 {
+  font-size: 25px;
+  font-style: italic;
+}
+
+.explanation p {
+  font-size: 15px;
+  text-align: left;
+  text-align: justify;
+}
+
+#searchbar {
+  border-radius: 20px;
+  border: 1px solid #E0E0E0;
+  padding: 10px;
+  width: 500px;
+  height: 43px;
+  font: Arial;
+  font-size: 18px;
+  background-color:transparent;
+  color:rgba(0,0,0,.87);
+  word-wrap:break-word;
+}
+
+#searchbar:focus {
+  outline: none;
+  -moz-box-shadow: 1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+#searchbar:hover {
+  -moz-box-shadow: 1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
 @media only screen and (max-width: 767px){
   #searchbar {
     width: 85%;
     height: 600%;
-    font-size: 600%;
+    font-size: 200%;
     margin-top: 5%;
   }
 
   .searchbutton {
-    font-size: 400%;
+    font-size: 150%;
     margin-top: 5%;
   }
 
-  .horizontal img {
+  .container img {
     padding-top: 50%;
     width: 95%;
+  }
+
+  .container p {
+    font-size: 40px;
+    padding-top: 42%;
+  }
+  
+  .explanation {
+    display: none;
   }
 }

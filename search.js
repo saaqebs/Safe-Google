@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 
 import style from './styles/style.module.css';
 import google from './images/google.png';
@@ -7,13 +8,15 @@ import google from './images/google.png';
 function Head(props) {
   return (
     <head>
-      <link rel="stylesheet" href="./styles/style.css" />
-      <link rel="shortcut icon" type="image/x-icon" href="./images/google.jng" />
-      <meta charset="utf-8" />
-      <meta name="author" content="Saaqeb Siddiqi" />
+      <Helmet>
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="./images/google.jng" />
+        <meta charset="utf-8" />
+        <meta name="author" content="Saaqeb Siddiqi" />
 
-      <title> Safe Google </title>
-      <script src="./script/script.js"> </script>
+        <title> Safe Google </title>
+        <script src="./script/script.js"> </script>
+      </Helmet>
     </head>
   );
 }
@@ -22,13 +25,12 @@ function SearchForm(props) {
   return (
     <form action="https://www.google.com/search?">
       <input name="hl" type="hidden" value="en" />
-      <div className={style.horizontal}>
-        <input name="q" type="text" autocomplete="off" maxlength="2048"
-            autofocus="autofocus" onfocus="this.select()"
-            id={style.searchbar} required minlength="2" />
+      <div className={style.padding_top}>
+        <input name="q" type="text" autocomplete="off" id={style.searchbar}
+          autofocus required onfocus="this.select()" maxlength="2048" minlength="1" />
       </div>
 
-      <div className={style.horizontal}>
+      <div className={style.padding_top}>
         <button type="submit" className={style.searchbutton}>
           Safe Search
         </button>
@@ -37,16 +39,42 @@ function SearchForm(props) {
   );
 }
 
+function Logo(props) {
+  return (
+    <div className={style.container}>
+      <p> Safer </p>
+      <img src={google} alt="Google" />
+    </div>
+  );
+}
+
+function Explanation(props) {
+  return (
+    <div className={style.explanation}>
+      <h1>How is it safer?</h1>
+      <p>
+        When you normally use Google search, you send invasive ad information
+        such as location and web browser data to Google.
+      </p>
+      <p>
+        This website conducts a normal Google search query without sending any
+        extra and invasive information!
+      </p>
+    </div>
+  );
+}
+
 function Body(props) {
   return (
     <body>
+      {/* <p className={style.visit_link}>
+        Click <a href="/">here</a> to visit my website to see my other projects!
+      </p> */}
       <div className={style.horizontal}>
-        <div className={style.container}>
-          <p> Safer </p>
-          <img src={google} alt="Google" />
-        </div>
+        <Logo />
+        <SearchForm />
+        <Explanation />
       </div>
-      <SearchForm />
     </body>
   )
 }
