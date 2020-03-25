@@ -1,11 +1,28 @@
 
-.visit_link {
-  position: relative;
+a {
+  color: rgb(70, 70, 70);
+}
+
+a:hover {
+  color: black;
+}
+
+.navbar {
+  position: fixed;
+  float: right;
+  right: 20px;
   top: 20px;
-  left: 20px;
-  /* margin: 20px 0px 0px 20px; */
-  font-size: 20px;
+  display: flex;
   font-family: "Arial";
+}
+
+.navbar p {
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+.propic {
+  width: 60px;
 }
 
 .searchbutton {
@@ -70,7 +87,7 @@
 .explanation p {
   font-size: 15px;
   text-align: left;
-  text-align: justify;
+  text-align: center;
 }
 
 #searchbar {
@@ -100,6 +117,11 @@
 }
 
 @media only screen and (max-width: 767px){
+
+  .navbar p {
+    font-size: 15px;
+  }
+
   #searchbar {
     width: 85%;
     height: 600%;
@@ -123,6 +145,12 @@
   }
   
   .explanation {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 370px){
+  .navbar .email {
     display: none;
   }
 }

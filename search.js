@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import style from './styles/style.module.css';
 import google from './images/google.png';
-
+import propic from './images/propic.png';
 
 function Head(props) {
   return (
@@ -64,12 +64,20 @@ function Explanation(props) {
   );
 }
 
+function Nav(props) {
+  return (
+    <div className={style.navbar}>
+      <p><a href="/">Saaqeb's Website</a></p>
+      <p className={style.email}><a href="mailto:asksaaqeb@gmail.com">Email Saaqeb</a></p>
+      <a href="/"><img src={propic} alt="Saaqeb" className={style.propic} /></a>
+    </div>
+  );
+}
+
 function Body(props) {
   return (
     <body>
-      {/* <p className={style.visit_link}>
-        Click <a href="/">here</a> to visit my website to see my other projects!
-      </p> */}
+      <Nav />
       <div className={style.horizontal}>
         <Logo />
         <SearchForm />
