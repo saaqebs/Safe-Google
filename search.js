@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
+import Helmet from 'react-helmet';
 
 import style from './styles/style.module.css';
 import google from './images/google.png';
 import propic from './images/propic.png';
+import logo from './images/logo.png';
+
+const content = "When you normally use Google search, you send invasive ad information such as location and web browser data to Google. This website conducts a normal Google search query without sending any extra and invasive information!";
+
 
 function Head(props) {
   return (
-    <head>
-      <Helmet>
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="shortcut icon" type="image/x-icon" href="./images/google.jng" />
-        <meta charset="utf-8" />
-        <meta name="author" content="Saaqeb Siddiqi" />
+    <Helmet>
+      {/* Primary Meta Tags */}
+      <title>Safer Google</title>
+      <meta name="title" content="Safer Google" />
+      <meta name="description" content={content} />
 
-        <title> Safe Google </title>
-        <script src="./script/script.js"> </script>
-      </Helmet>
-    </head>
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://saaqebs.com/search" />
+      <meta property="og:title" content="Safer Google" />
+      <meta property="og:description" content={content} />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://saaqebs.com/search" />
+      <meta property="twitter:title" content="Safer Google" />
+      <meta property="twitter:description" content={content} />
+
+      <script src="./script/script.js"> </script>
+    </Helmet>
   );
 }
 
@@ -26,8 +39,8 @@ function SearchForm(props) {
     <form action="https://www.google.com/search?">
       <input name="hl" type="hidden" value="en" />
       <div className={style.padding_top}>
-        <input name="q" type="text" autocomplete="off" id={style.searchbar}
-          autofocus="autofocus" required onFocus="this.select()" maxlength="2048" minlength="1" />
+        <input name="q" type="text" autoComplete="off" id={style.searchbar}
+          autoFocus="autofocus" required maxLength="2048" minLength="1" />
       </div>
 
       <div className={style.padding_top}>
@@ -76,14 +89,14 @@ function Nav(props) {
 
 function Body(props) {
   return (
-    <body>
+    <main className="noselect">
       <Nav />
       <div className={style.horizontal}>
         <Logo />
         <SearchForm />
         <Explanation />
       </div>
-    </body>
+    </main>
   )
 }
 
@@ -91,10 +104,10 @@ function Body(props) {
 class Search extends Component {
   render() {
     return (
-      <html lang="en">
+      <div lang="en">
         <Head />
         <Body />
-      </html>
+      </div>
     );
   }
 }
